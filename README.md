@@ -26,3 +26,5 @@ Progress:
 2020.02.29.1928 - Added beginning pseudocode to .js files.
 
 2020.02.29.1950 - Added dependencies to .js files. Commented out initial code starting point in 'index.js'.  Began coding user prompts in 'index.js'.
+
+2020.02.29.2005 - Added user prompts and comments explaining code to 'index.js'.
