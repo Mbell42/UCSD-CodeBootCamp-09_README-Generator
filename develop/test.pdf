@@ -1,9 +1,9 @@
-# a
+# readme
 
   [![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](http://ForTheBadge.com)
 
   ## Description
-  a
+  project template
 
   ## Table of Contents
   - [Installation](#Installation)
@@ -14,22 +14,22 @@
   - [Questions](#Questions)
   
   ## Installation Requirements
-  The following dependiencies are required for project a: 
+  The following dependiencies are required for project readme: 
   
   ## Usage
-  a
+  Use as starting template-generator for new projects
 
   ## License
-  a
+  n/a
 
   ## Contributing Parties
-  a
+  mbell
 
   ## Tests
-  a
+  n/a
 
   ## Questions
-  a
+  none
 
   ## GitHub Profile Image
   # mbell42

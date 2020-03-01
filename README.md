@@ -38,3 +38,5 @@ Progress:
 2020.02.29.2314 - I began filling in generateMarkdown function in 'generateMarkdown.js', and commented out console log of api get results in 'api.js'.  For 'index.js', I completed a first pass on the promptUser() function, which should create 'test.md' and update the user, or throw an error; and then updated user prompts to include a ': ' at the end, for increased clarity to user when program is run.
 
 2020.02.29.2336 - I completed first pass of generateMarkdown function in 'generateMarkdown.js'.  For 'index.js', I updated promptUser function.
+
+2020.02.29.2352 - I tested running 'index.js' in cli, and created gif for submission.
