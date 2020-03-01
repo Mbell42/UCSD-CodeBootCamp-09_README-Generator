@@ -32,3 +32,5 @@ Progress:
 2020.02.29.2021 - Began function in 'index.js' to take in user's answers to prompts and api return, to be used to generate the content of the readme file.  In 'api.js', added axios api call to GitHub for user details based on the users answer to the github username prompt in 'index.js'.  
 
 2020.02.29.2030 - I ran npm i in 'develop' folder, and audit checked/fixed two DenialOfService (D.O.S.) vulnerablilities. This added 'package-lock.json.'. This allowed me to run 'index.js' in order to test current functionality, as well as to check return from GitHub api call.  All tests green so far.  Next I will begin filling in generateMarkdown function in 'generateMarkdown.js', and then will complete function that calls generateMarkdown in 'index.js'.
+
+2020.02.29.2256 - I began filling in generateMarkdown function in 'generateMarkdown.js', and commented out console log of api get results in 'api.js'.  For 'index.js', I completed a first pass on the promptUser() function, which should create 'test.md' and update the user, or throw an error; and then updated user prompts to include a ': ' at the end, for increased clarity to user when program is run.

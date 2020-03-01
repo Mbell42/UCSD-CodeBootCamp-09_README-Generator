@@ -15,19 +15,19 @@ function promptUser() {
             // Prompt user for Github username
             type: "input",
             name: "ghUsername",
-            message: "What is your GitHub username?"
+            message: "What is your GitHub username? "
         },
         {
             // Prompt user for Project Title
             type: "input",
             name: "projectTitle",
-            message: "Enter a title for your project"
+            message: "Enter a title for your project: "
         },
         {
             // Prompt user for Description
             type: "input",
             name: "description",
-            message: "Enter a description for your project"
+            message: "Enter a description for your project: "
         },
         // {
         //     // Prompt user for Table of Contents
@@ -39,37 +39,37 @@ function promptUser() {
             // Prompt user for Installation
             type: "input",
             name: "installation",
-            message: "Enter required installations/dependencies for your project"
+            message: "Enter required installations/dependencies for your project: "
         },
         {
             // Prompt user for Usage Details/rights
             type: "input",
             name: "usage",
-            message: "Enter Usage details/rights for your project"
+            message: "Enter Usage details for your project: "
         },
         {
             // Prompt user for applicable Licenses
             type: "input",
             name: "license",
-            message: "Enter applicable licenses for your project"
+            message: "Enter applicable licenses for your project: "
         },
         {
             // Prompt user for Contributing entities
             type: "input",
             name: "contributing",
-            message: "Enter contributing entities"
+            message: "Enter contributing entities: "
         },
         {
             // Prompt user for related Tests
             type: "input",
             name: "tests",
-            message: "Enter related tests for your project"
+            message: "Enter related tests for your project: "
         },
         {
             // Prompt user for questions
             type: "input",
             name: "questions",
-            message: "Enter additional questions"
+            message: "Enter additional questions: "
         }
 
     ]);
@@ -78,13 +78,21 @@ function promptUser() {
 // Using data from user's answers, create markdown for readme.pdf
 promptUser()
     .then(function(answers) {
-        const gitHub = api.getUser(answers.ghUsername);
+        // const gitHub = api.getUser(answers.ghUsername);
         const markdown = generateMarkdown(answers);
+        // const gitHubURL = gitHub.data.url;
 
         console.log(answers);
-        console.log(gitHub);
+        // console.log(gitHub);
+        // console.log(gitHubURL);
         
-
+        return writeFileAsync("test.md", markdown);
+})
+.then(function() {
+    console.log("test.md has been created successfully");
+})
+.catch(function(err) {
+    console.log(err);
 });
 
 

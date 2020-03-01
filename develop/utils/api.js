@@ -6,8 +6,9 @@ const axios = require("axios");
 const api = {
     getUser(ghUsername) {
       axios.get(`http://api.github.com/users/${ghUsername}`)
-        .then(function(res) {
-          console.log(res);
+        .then(function(result) {
+          // console.log(result);
+          return result;
           
       });
     }
