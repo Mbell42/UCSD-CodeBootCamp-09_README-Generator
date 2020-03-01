@@ -4,7 +4,6 @@ const fs = require("fs");
 const util = require("util");
 const api = require("./utils/api");
 const generateMarkdown = require("./utils/generateMarkdown");
-
 // Setting constant for asynchronously writing to file
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -74,11 +73,10 @@ function promptUser() {
 
     ]);
 };
-
 // Using data from user's answers, create markdown for readme.pdf
 promptUser()
     .then(function(answers) {
-        // const gitHub = api.getUser(answers.ghUsername);
+        // const gitHub = api.api.getUser(answers.ghUsername);
         const markdown = generateMarkdown(answers);
         // const gitHubURL = gitHub.data.url;
 
@@ -86,26 +84,14 @@ promptUser()
         // console.log(gitHub);
         // console.log(gitHubURL);
         
-        return writeFileAsync("test.md", markdown);
-})
-.then(function() {
-    console.log("test.md has been created successfully");
-})
-.catch(function(err) {
-    console.log(err);
-});
-
-
-
-
-
-
-
-
-
-
-
-
+        return writeFileAsync("test.md", markdown).then(writeFileAsync("test.pdf", markdown));
+    })
+    .catch(function(err) {
+        console.log(err + "\n");
+    })
+    .finally(function() {
+        console.log("test.md and test.pdf have been created successfully");
+    });
 
 // --initial code starting point below--
 // const questions = [

@@ -2,28 +2,43 @@
 function generateMarkdown(answers) {
   // Title of project, any Badges, Project Description, Table of Contents,
   //and project details will be generated here from user's answers.
-  return `# ${answers.projectTitle};
+  return `# ${answers.projectTitle}
 
-  Description
+  [![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](http://ForTheBadge.com)
+
+  ## Description
   ${answers.description}
 
-  Table of Contents
+  ## Table of Contents
   - [Installation](#Installation)
   - [Usage](Usage)
+  - [License](#License)
+  - [Contributing](#Contributing)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
   
-  Installation Requirements
+  ## Installation Requirements
+  The following dependiencies are required for project ${answers.projectTitle}: 
+  
+  ## Usage
+  ${answers.usage}
 
-  Usage
+  ## License
+  ${answers.license}
 
-  License
+  ## Contributing Parties
+  ${answers.contributing}
 
-  Contributing Parties
+  ## Tests
+  ${answers.tests}
 
-  Tests
+  ## Questions
+  ${answers.questions}
 
-  Questions
+  ## GitHub Profile Image
+  # ${answers.ghUsername}
+
   `;
-}
-  
+};
 module.exports = generateMarkdown;
   
