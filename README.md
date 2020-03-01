@@ -28,3 +28,5 @@ Progress:
 2020.02.29.1950 - Added dependencies to .js files. Commented out initial code starting point in 'index.js'.  Began coding user prompts in 'index.js'.
 
 2020.02.29.2005 - Added user prompts and comments explaining code to 'index.js'.
+
+2020.02.29.2021 - Began function in 'index.js' to take in user's answers to prompts and api return, to be used to generate the content of the readme file.  In 'api.js', added axios api call to GitHub for user details based on the users answer to the github username prompt in 'index.js'.  

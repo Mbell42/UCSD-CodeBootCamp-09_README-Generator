@@ -14,19 +14,19 @@ function promptUser() {
         {
             // Prompt user for Github username
             type: "input",
-            name: "GitHub Username",
+            name: "ghUsername",
             message: "What is your GitHub username?"
         },
         {
             // Prompt user for Project Title
             type: "input",
-            name: "Project Title",
+            name: "projectTitle",
             message: "Enter a title for your project"
         },
         {
             // Prompt user for Description
             type: "input",
-            name: "Description",
+            name: "description",
             message: "Enter a description for your project"
         },
         // {
@@ -38,45 +38,54 @@ function promptUser() {
         {
             // Prompt user for Installation
             type: "input",
-            name: "Installation",
+            name: "installation",
             message: "Enter required installations/dependencies for your project"
         },
         {
             // Prompt user for Usage Details/rights
             type: "input",
-            name: "Usage",
+            name: "usage",
             message: "Enter Usage details/rights for your project"
         },
         {
             // Prompt user for applicable Licenses
             type: "input",
-            name: "License",
+            name: "license",
             message: "Enter applicable licenses for your project"
         },
         {
             // Prompt user for Contributing entities
             type: "input",
-            name: "Contributing",
+            name: "contributing",
             message: "Enter contributing entities"
         },
         {
             // Prompt user for related Tests
             type: "input",
-            name: "Tests",
+            name: "tests",
             message: "Enter related tests for your project"
         },
         {
             // Prompt user for questions
             type: "input",
-            name: "Questions",
+            name: "questions",
             message: "Enter additional questions"
-        },
+        }
 
-    ])
-}
+    ]);
+};
 
-// Using data from user's answers, create readme.pdf
+// Using data from user's answers, create markdown for readme.pdf
+promptUser()
+    .then(function(answers) {
+        const gitHub = api.getUser(answers.ghUsername);
+        const markdown = generateMarkdown(answers);
 
+        console.log(answers);
+        console.log(gitHub);
+        
+
+});
 
 
 

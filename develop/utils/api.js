@@ -4,7 +4,12 @@ const axios = require("axios");
 
 // Get user's GitHub Details
 const api = {
-    getUser(username) {
+    getUser(ghUsername) {
+      axios.get(`http://api.github.com/users/${ghUsername}`)
+        .then(function(res) {
+          console.log(res);
+          
+      });
     }
   };
   
