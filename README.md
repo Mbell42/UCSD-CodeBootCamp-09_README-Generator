@@ -22,3 +22,5 @@ Resources used:
 Progress:
 ------------
 2020.02.29.0046 - Initial Commit.  Initialized readme.me, and set up folder structure.  Created and copied initial setup for index.js, package.json, api.js, and generateMarkdown.js. Researched the following npm modules; inquirer, axios, api. 
+
+2020.02.29.1915 - Added beginning pseudocode to .js files.
