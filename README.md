@@ -15,8 +15,8 @@ Resources used:
 	- inquirer
 	- axios
 	- api
-	- ""
-	- ""
+	- fs
+	- util
 
 
 Progress:
