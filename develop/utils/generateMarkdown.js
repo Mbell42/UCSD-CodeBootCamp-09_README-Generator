@@ -6,6 +6,9 @@ function generateMarkdown(answers) {
 
   [![ForTheBadge uses-js](http://ForTheBadge.com/images/badges/uses-js.svg)](http://ForTheBadge.com)
 
+  [![NPM Version](https://img.shields.io/npm/v/npm.svg?style=flat)]()
+  [![HitCount](http://hits.dwyl.com/{username}/{project}.svg)](http://hits.dwyl.com/{username}/{project})
+
   ## Description
   ${answers.description}
 
@@ -37,6 +40,9 @@ function generateMarkdown(answers) {
 
   ## GitHub Profile Image
   # ${answers.ghUsername}
+
+  ## Github Profile Avatar
+  ![Profile Picture](${answers.avatar}=250x)
 
   `;
 };
