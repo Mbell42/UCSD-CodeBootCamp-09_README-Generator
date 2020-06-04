@@ -93,11 +93,4 @@ promptUser()
         console.log("test.md and test.pdf have been created successfully");
     });
 
-// --initial code starting point below--
-// const questions = [
-// ];
-// function writeToFile(fileName, data) {
-// }
-// function init() {
-// }
-// init();
+

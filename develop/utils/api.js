@@ -6,7 +6,10 @@ const api = {
       axios.get(`http://api.github.com/users/${ghUsername}`)
         .then(function(result) {
           // console.log(result);
-          return result;   
+          return (res.data.avatar_url);
+            
+        }).catch(function (error) {
+          if(error) throw (error);  
       });
     }
   };
