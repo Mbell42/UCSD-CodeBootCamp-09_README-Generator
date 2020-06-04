@@ -9,7 +9,8 @@ const api = {
           return (res.data.avatar_url);
             
         }).catch(function (error) {
-          if(error) throw (error);  
+          console.log(error);
+          ;  
       });
     }
   };
