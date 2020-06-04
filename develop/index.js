@@ -28,12 +28,6 @@ function promptUser() {
             name: "description",
             message: "Enter a description for your project: "
         },
-        // {
-        //     // Prompt user for Table of Contents
-        //     type: "input",
-        //     name: "Table of Contents",
-        //     message: "Enter a title for your project"
-        // },
         {
             // Prompt user for Installation
             type: "input",
@@ -74,23 +68,45 @@ function promptUser() {
     ]);
 };
 // Using data from user's answers, create markdown for readme.pdf
-promptUser()
-    .then(function(answers) {
-        // const gitHub = api.api.getUser(answers.ghUsername);
+async function init() {
+    try {
+        // compiling answers
+        const answers = await promptUser();
+        console.log("compiling answers", answers);
+        const github = await api(answers.username);
+        // get user github profile pic
+        answers.avatar = github;
         const markdown = generateMarkdown(answers);
-        // const gitHubURL = gitHub.data.url;
 
-        console.log(answers);
-        // console.log(gitHub);
-        // console.log(gitHubURL);
+        await writeFileAsync('README.md', markdown);
+        console.log("readme generated!")
+      
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+// initialize program
+init();
+
+
+// Using data from user's answers, create markdown for readme.pdf
+// promptUser()
+//     .then(function(answers) {
+//         // const gitHub = api.api.getUser(answers.ghUsername);
+//         const markdown = generateMarkdown(answers);
+//         // const gitHubURL = gitHub.data.url;
+
+//         console.log(answers);
+//         // console.log(gitHub);
+//         // console.log(gitHubURL);
         
-        return writeFileAsync("test.md", markdown).then(writeFileAsync("test.pdf", markdown));
-    })
-    .catch(function(err) {
-        console.log(err + "\n");
-    })
-    .finally(function() {
-        console.log("test.md and test.pdf have been created successfully");
-    });
-
+//         return writeFileAsync("test.md", markdown).then(writeFileAsync("test.pdf", markdown));
+//     })
+//     .catch(function(err) {
+//         console.log(err + "\n");
+//     })
+//     .finally(function() {
+//         console.log("test.md and test.pdf have been created successfully");
+//     });
 

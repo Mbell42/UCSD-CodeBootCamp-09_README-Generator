@@ -1,18 +1,17 @@
 // Grabbing dependencies
 const axios = require("axios");
-// Get user's GitHub Details
-const api = {
-    getUser(ghUsername) {
-      axios.get(`http://api.github.com/users/${ghUsername}`)
-        .then(function(result) {
-          // console.log(result);
-          return (res.data.avatar_url);
-            
-        }).catch(function (error) {
-          console.log(error);
-          ;  
-      });
-    }
-  };
+// Get user's GitHub Details and convert to new Promise
+function api(ghUsername) {
+  return new Promise((resolve, reject) => {
+   axios.get(`https://api.github.com/users/${ghUsername}`).then((res) => {
+     resolve 
+          resolve (res.data.avatar_url);   
+        })
+          .catch(function (error) {
+          reject(error);
+        });
+       })
+     };
+
   module.exports = api;
   
